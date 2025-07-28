@@ -530,30 +530,67 @@ body {
     border-color: #1a1a1a transparent transparent transparent;
 }
 
-/* Soon Section */
-.soon-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 300px;
+/* Projects Section */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.project-card {
+    background: #111;
+    border: 1px solid #333;
+    border-radius: 12px;
+    padding: 30px;
     text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
 }
 
-.soon-icon {
-    font-size: 120px;
-    margin-bottom: 30px;
-    opacity: 0.7;
+.project-card:hover {
+    transform: translateY(-5px);
+    border-color: #00ffff;
+    box-shadow: 0 10px 30px rgba(0, 255, 255, 0.2);
 }
 
-.soon-text {
-    font-size: 48px;
+.project-icon {
+    font-size: 60px;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.project-title {
+    color: #fff;
+    font-size: 24px;
     font-weight: 600;
-    color: #666;
-    letter-spacing: 4px;
+    margin-bottom: 15px;
 }
 
+.project-description {
+    color: #a0a0a0;
+    font-size: 16px;
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
 
+.project-link {
+    display: inline-block;
+    background: linear-gradient(45deg, #00ffff, #ff00ff);
+    color: #000;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+}
+
+.project-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.5);
+}
 
 /* Donate Section */
 .donate-intro {
@@ -747,14 +784,24 @@ body {
         padding: 60px 0;
     }
     
-    .soon-icon {
-        font-size: 80px;
+        .projects-grid {
+        grid-template-columns: 1fr;
     }
     
-    .soon-text {
-        font-size: 32px;
-        letter-spacing: 2px;
+    .project-card {
+        padding: 20px;
     }
+    
+    .project-icon {
+        font-size: 50px;
+    }
+    
+    .project-title {
+        font-size: 20px;
+    }
+    
+    .project-description {
+        font-size: 14px;
     
     .contact-links {
         flex-direction: column;
@@ -797,6 +844,13 @@ body {
     .admin-toggle {
         bottom: 20px;
         left: 20px;
+    }
+}
+
+        
+    .project-link {
+        width: 100%;
+        text-align: center;
     }
 }
 
@@ -1249,29 +1303,16 @@ body {
     100% { transform: translateY(400px); opacity: 0; }
 }
 
-/* Morphing Shapes */
-.soon-icon {
-    font-size: 120px;
-    margin-bottom: 30px;
-    opacity: 0.7;
-    animation: morph-shape 4s ease-in-out infinite;
+/* Project Icon Animation */
+.project-icon {
+    animation: float-icon 3s ease-in-out infinite;
 }
 
-@keyframes morph-shape {
+@keyframes float-icon {
     0%, 100% { 
-        transform: scale(1) rotate(0deg);
-        border-radius: 50%;
-    }
-    25% { 
-        transform: scale(1.1) rotate(90deg);
-        border-radius: 20%;
+        transform: translateY(0px);
     }
     50% { 
-        transform: scale(0.9) rotate(180deg);
-        border-radius: 0%;
-    }
-    75% { 
-        transform: scale(1.05) rotate(270deg);
-        border-radius: 30%;
+        transform: translateY(-10px);
     }
 }
