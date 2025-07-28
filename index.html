@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lovly.dev - Разработчик</title>
+    <meta name="description" content="Веб-разработчик, создающий современные приложения на JavaScript, React, Node.js">
+    <meta name="keywords" content="веб-разработчик, JavaScript, React, Node.js, фронтенд, бэкенд">
+    <meta name="author" content="Lovly.dev">
+    <meta property="og:title" content="Lovly.dev - Разработчик">
+    <meta property="og:description" content="Создаю современные веб-приложения и цифровые решения">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://lovly.dev">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Lovly.dev - Разработчик">
+    <meta name="twitter:description" content="Создаю современные веб-приложения и цифровые решения">
+    <link rel="canonical" href="https://lovly.dev">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="preloader-content">
+            <div class="loader"></div>
+            <p>lovly.dev</p>
+        </div>
+    </div>
+    
+    <!-- Animated Background -->
+    <div class="bg-animation">
+        <canvas id="particles"></canvas>
+    </div>
+    
+    <div class="progress-bar"></div>
+    <div class="container">
+        <header class="header">
+            <nav class="nav">
+                <div class="logo">lovly.dev</div>
+                <div class="nav-right">
+                    <div class="nav-links">
+                        <a href="#about" data-ru="О себе" data-en="About">О себе</a>
+                        <a href="#projects" data-ru="Проекты" data-en="Projects">Проекты</a>
+
+                        <a href="#donate" data-ru="Донаты" data-en="Donate">Донаты</a>
+                        <a href="#contact" data-ru="Контакты" data-en="Contact">Контакты</a>
+                    </div>
+                    <div class="lang-switcher">
+                        <button class="lang-btn active" data-lang="ru">RU</button>
+                        <button class="lang-btn" data-lang="en">EN</button>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main class="main">
+            <section class="hero">
+                <div class="hero-3d">
+                    <canvas id="hologram-canvas"></canvas>
+                    <div class="hologram-overlay"></div>
+                </div>
+                <div class="hero-content">
+                    <div class="status-badge">
+                        <span class="status-dot"></span>
+                        <span class="status-text" data-ru="Доступен для проектов" data-en="Available for projects">Доступен для проектов</span>
+                    </div>
+                    <h1 class="hero-title" data-ru="Привет, я разработчик" data-en="Hi, I'm a developer">Привет, я разработчик</h1>
+                    <p class="hero-subtitle" data-ru="Создаю современные веб-приложения и цифровые решения" data-en="Creating modern web applications and digital solutions">Создаю современные веб-приложения и цифровые решения</p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary" data-ru="Мои проекты" data-en="My Projects">Мои проекты</a>
+                        <a href="#contact" class="btn btn-secondary" data-ru="Связаться" data-en="Contact">Связаться</a>
+                    </div>
+                </div>
+            </section>
+
+            <section id="about" class="section">
+                <h2 data-ru="О себе" data-en="About Me">О себе</h2>
+                <div class="about-content">
+                    <p>Привет! Меня зовут Артём Ловли, мое прозвище Ловли, и мне 17 лет.</p>
+                    <p>В конце концов, я делаю разные вещи, но в основном это программирование или что-то о программировании</p>
+                    <p>Честно говоря, мне нечего сказать о себе, так что...</p>
+                    <h3>Навыки (и не только)</h3>
+                    <p>Я люблю и обожаю следующие вещи:</p>
+                    <ul class="skills-list">
+                        <li><span class="skill-icon nodejs">N</span>Node.js</li>
+                        <li><span class="skill-icon javascript">JS</span>JavaScript</li>
+                        <li><span class="skill-icon python">Py</span>Python</li>
+                        <li><span class="skill-icon css">CSS</span>CSS</li>
+                    </ul>
+                    <p>Написание моих собственных версий библиотек/проектов, которые уже существуют</p>
+                </div>
+                <div class="github-widget">
+                    <h3 data-ru="GitHub Активность" data-en="GitHub Activity">GitHub Активность</h3>
+                    <div class="github-stats">
+                        <div class="github-stat">
+                            <span class="stat-number">127</span>
+                            <span class="stat-label" data-ru="Коммитов" data-en="Commits">Коммитов</span>
+                        </div>
+                        <div class="github-stat">
+                            <span class="stat-number">23</span>
+                            <span class="stat-label" data-ru="Репозиториев" data-en="Repositories">Репозиториев</span>
+                        </div>
+                        <div class="github-stat">
+                            <span class="stat-number">8</span>
+                            <span class="stat-label" data-ru="Языков" data-en="Languages">Языков</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skills-3d" style="margin-top: 30px;">
+                    <canvas id="skills-canvas"></canvas>
+                    <p>Здесь ты можешь посмотреть документацию на все языки:</p>
+                    <div class="skills">
+                        <a href="https://nodejs.org" target="_blank" class="skill" data-tooltip="Express, MongoDB">Node.js</a>
+                        <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" class="skill" data-tooltip="ES6+, TypeScript">JavaScript</a>
+                        <a href="https://www.python.org" target="_blank" class="skill" data-tooltip="Django, FastAPI">Python</a>
+                        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" class="skill" data-tooltip="SCSS, Tailwind">CSS</a>
+                    </div>
+                </div>
+            </section>
+
+            <section id="projects" class="section">
+                <div class="matrix-rain"></div>
+                <h2 data-ru="Проекты" data-en="Projects">Проекты</h2>
+                <div class="soon-container">
+                    <div class="soon-icon">⏳</div>
+                    <p class="soon-text">SOON</p>
+                </div>
+            </section>
+            
+
+            <section id="donate" class="section hud-section">
+                <div class="hud-overlay">
+                    <div class="hud-corner hud-top-left"></div>
+                    <div class="hud-corner hud-top-right"></div>
+                    <div class="hud-corner hud-bottom-left"></div>
+                    <div class="hud-corner hud-bottom-right"></div>
+                    <div class="hud-scanline"></div>
+                </div>
+                <h2 data-ru="Поддержать проект" data-en="Support Project">поддержать меня</h2>
+                <div class="donate-intro">
+                    <p data-ru="Я не буду осуждать тебя, если ты полностью пропустил этот раздел" data-en="I won't judge you if you completely skip this section">Я не буду осуждать тебя, если ты полностью пропустил этот раздел</p>
+                    <p data-ru="Если вы по какой-то причине хотите поддержать меня, я принимаю все, что указано ниже. Заранее огромное спасибо!" data-en="If for some reason you want to support me, I accept everything listed below. Thank you so much in advance!">Если вы по какой-то причине хотите поддержать меня, я принимаю все, что указано ниже. Заранее огромное спасибо!</p>
+                </div>
+                
+                <div class="donate-section">
+                    <h3 data-ru="Криптовалюты" data-en="Crypto">Crypto</h3>
+                    <div class="donate-grid">
+                        <div class="donate-item">
+                            <span class="donate-label">TON:</span>
+                            <span class="donate-address">UQCwD1nL8nue2n..TP</span>
+                            <button class="copy-donate-btn" data-address="UQCwD1nL8nue2nMxjhU5q0aTI-MWmZ0qJu_WSZtre7TPqwTP" data-tooltip="Копировать адрес">
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="donate-item">
+                            <span class="donate-label">BTC:</span>
+                            <span class="donate-address">bc1q4uccv7td6s.. yd</span>
+                            <button class="copy-donate-btn" data-address="bc1q4uccv7td6sapyfxws4ltq7ejwjlzndycntppyd" data-tooltip="Копировать адрес">
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="donate-item">
+                            <span class="donate-label">ETH:</span>
+                            <span class="donate-address">0x618943dB2E48.. 72</span>
+                            <button class="copy-donate-btn" data-address="0x618943dB2E48B878a61aa0C2325b006896c66572" data-tooltip="Копировать адрес">
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="donate-item">
+                            <span class="donate-label">SOL:</span>
+                            <span class="donate-address">8KvbnxuWg6Exwb.. Hk</span>
+                            <button class="copy-donate-btn" data-address="8KvbnxuWg6Exwb5HP38FoAXv4g3vUatYSNcHp3gVrGHk" data-tooltip="Копировать адрес">
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                </svg>
+                            </button>
+                        </div>
+                
+                <div class="donate-section">
+                    <h3 data-ru="Фиат" data-en="Fiat">Fiat</h3>
+                    <div class="donate-grid">
+                        <div class="donate-item">
+                            <span class="donate-label">Tinkoff:</span>
+                            <a href="https://www.tinkoff.ru/rm/r_bjCqYQpqeb.xkkynFDLIO/56ihz62719" class="donate-link">click</a>
+                            <button class="qr-btn" data-tooltip="Показать QR код" onclick="showQR()">📱</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contact" class="section">
+                <h2 data-ru="Контакты" data-en="Contact">Контакты</h2>
+                <p data-ru="Готов обсудить ваш проект или возможности сотрудничества" data-en="Ready to discuss your project or collaboration opportunities">Готов обсудить ваш проект или возможности сотрудничества</p>
+                <div class="contact-links">
+                    <div class="contact-item">
+                        <span class="contact-link">whylovlygod@icloud.com</span>
+                        <button class="copy-btn" data-email="whylovlygod@icloud.com" data-tooltip="Копировать email">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <a href="https://github.com/wenlixxq1" class="contact-link">GitHub</a>
+                    <a href="https://t.me/lovlyher" class="contact-link">Telegram</a>
+                </div>
+                
+
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p data-ru="&copy; 2025 lovly.dev. Все права защищены." data-en="&copy; 2024 lovly.dev. All rights reserved.">&copy; 2024 lovly.dev. Все права защищены.</p>
+        </footer>
+    </div>
+    
+    <!-- Back to Top Button -->
+    <button class="back-to-top" data-tooltip="Наверх">↑</button>
+    
+    <!-- Tooltip -->
+    <div class="tooltip"></div>
+    
+    <!-- QR Modal -->
+    <div class="qr-modal" id="qr-modal">
+        <div class="qr-content">
+            <h3>Сканируйте QR код</h3>
+            <div class="qr-code">
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://www.tinkoff.ru/rm/r_bjCqYQpqeb.xkkynFDLIO/56ihz62719" alt="Tinkoff QR Code" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTUwIiBoZWlnaHQ9IjE1MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTUwIiBoZWlnaHQ9IjE1MCIgZmlsbD0iI2ZmZiIvPjx0ZXh0IHg9Ijc1IiB5PSI3NSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iIGZvbnQtZmFtaWx5PSJtb25vc3BhY2UiIGZvbnQtc2l6ZT0iMTIiIGZpbGw9IiMzMzMiPlFSIEtvZGU8L3RleHQ+PC9zdmc+';">
+                <p style="margin-top:10px; font-size:12px; color:#666;"></p>
+            </div>
+            <p>Откройте камеру и наведите на QR код</p>
+            <button class="qr-close" onclick="closeQR()">×</button>
+        </div>
+    </div>
+    
+    <!-- Admin Panel -->
+    <div class="admin-panel" id="admin-panel">
+        <div class="admin-content">
+            <h3>Админ-панель</h3>
+            
+            <div class="admin-section">
+                <div class="admin-analytics" id="admin-analytics">
+                    <h4>Популярные разделы:</h4>
+                    <p>Загрузка...</p>
+                </div>
+            </div>
+            
+            <div class="admin-section">
+                <h4>Q&A Управление</h4>
+                <div class="admin-questions" id="admin-questions"></div>
+            </div>
+            
+            <button class="admin-close" id="admin-close">×</button>
+        </div>
+    </div>
+    
+    <!-- Admin Toggle -->
+    <div class="admin-toggle" id="admin-toggle">⚙️</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
