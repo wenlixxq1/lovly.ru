@@ -855,8 +855,6 @@ body {
         padding: 6px 12px;
     }
     
-
-    
     .back-to-top {
         bottom: 20px;
         width: 50px;
@@ -874,6 +872,15 @@ body {
     .project-link {
         width: 100%;
         text-align: center;
+    }
+}
+    
+    .project-badge {
+        position: static;
+        display: inline-block;
+        margin-bottom: 15px;
+        font-size: 11px;
+        padding: 5px 10px;
     }
 }
 
