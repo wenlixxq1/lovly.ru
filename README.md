@@ -1,4 +1,4 @@
-# Lovly.dev - Personal Portfolio
+# Lovly.ru - Personal Portfolio
 
 ## 🚀 Запуск проекта
 
